@@ -30,6 +30,14 @@
   required minlength="2" maxlength="20" />
   <button>Join</button>
 
-  <h1>Users</h1>
+  <div>Users</div>
+  <ul>
+    <% @users.each do |user| %>
+      <li> 
+        <%= user.codename %>
+      </li>
+    <% end %>
+  </ul>
+
 </body>
 </html>

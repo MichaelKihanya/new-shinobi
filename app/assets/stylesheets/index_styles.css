@@ -141,8 +141,10 @@ line-height: 40px;
 /* identical to box height, or 167% */
 
 color: #46E840;
+}
 
-
+li {
+  color: white;
 }
 
 /* TYPING EFFECT STYLE BELOW */
