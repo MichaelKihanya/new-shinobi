@@ -1,9 +1,35 @@
-# README
+# The New Shinobi
+## Project Description
+### Design/UI/UX
+- User cards
+  - for each user that joins to live by "The New Shinobi Code"
+- Fan FAQ component
+- Push notifications
+  - Message: "Today, you live by the New Shinobi Code"
+- Colors: Lime Green (46E840), Brown (744F00), Dark Purple (74005F)
+- Font: Major Mono Display
+## Technology(ies)
+- HTML
+- CSS
+- Ruby version: 3.2.2
+- Ruby on Rails: 7.1.4
+### Deployment
+- Netlify
+### Domain
+- Either newshinobi.com or newshinobi.live
+## Inspiration
+### Questions
+How do we come up with cultural mechanisms to defend our psychological and cultural
+borders?
+How do we create a society without truth decay/misinformation while upholding the 
+freedoms we hold dear?
+Enter `The Village in the Hidden Door`
+### The New Shinobi Code
+To live by "The New Shinobi Code", one does not do so loudly, with social media posts, or telling friends and family. Practicing "The New Shinobi Code" is an internal practice. A practice of reflection. A practice of goodness. To ultimately better one's life and those in it.
+### Quote
+`Through our scientific and technological genius, we've made of this world a neighborhood. And now through our moral and ethical commitment, we must make of it a brotherhood. We must all learn to live together as brothers—or we will all perish together as fools.` - Martin Luther King Jr.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Things to cover as they become applicable:
 
 * Ruby version
 
@@ -12,7 +38,7 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-
+  - `rails db:create`
 * Database initialization
 
 * How to run the test suite
@@ -20,6 +46,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-# new-shinobi
