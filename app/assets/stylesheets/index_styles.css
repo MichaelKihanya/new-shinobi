@@ -29,6 +29,23 @@ h1 {
   /* border: solid white; */
   }
 
+h2 {
+  position: absolute;
+  width: 1090px;
+  height: 150px;
+  left: calc(50% - 1090px/2);
+  top: 949px;
+  
+  font-family: 'Major Mono Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 75px;
+  /* or 117% */
+  
+  color: #46E840;
+  }
+
 #leftside-code {
 display: flex;
 flex-direction: column;
@@ -73,23 +90,6 @@ color: #46E840;
 /* border: solid white; */
 }
 
-h2 {
-position: absolute;
-width: 1090px;
-height: 150px;
-left: calc(50% - 1090px/2);
-top: 949px;
-
-font-family: 'Major Mono Display';
-font-style: normal;
-font-weight: 400;
-font-size: 64px;
-line-height: 75px;
-/* or 117% */
-
-color: #46E840;
-}
-
 #agreement {
 position: absolute;
 width: 848px;
@@ -107,7 +107,7 @@ line-height: 40px;
 color: #46E840;
 }
 
-input {
+#name {
 position: absolute;
 width: 844px;
 height: 71px;
@@ -123,7 +123,7 @@ font-size: medium;
 text-align: center;
 }
 
-button {
+#join-button {
 position: absolute;
 width: 243px;
 height: 71px;

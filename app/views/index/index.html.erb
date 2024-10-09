@@ -26,10 +26,12 @@
     THE NEW SHINOBI CODE each day...
   </div>
 
-  <input type="text" id="name" name="name" placeholder="BE A NEW SHINOBI..." 
+  <form action="/user" method="post">
+    <input type="text" id="name" name="name" placeholder="BE A NEW SHINOBI..." 
   required minlength="2" maxlength="20" />
-  <button>Join</button>
-
+    <input type="submit" value="Join" id="join-button" />
+  </form>
+ 
   <div>Users</div>
   <ul>
     <% @users.each do |user| %>
