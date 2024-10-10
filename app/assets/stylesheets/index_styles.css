@@ -147,6 +147,27 @@ li {
   color: white;
 }
 
+#shinobi-count {
+position: absolute;
+width: 1043px;
+height: 64px;
+left: calc(50% - 1043px/2 + 33.5px);
+top: 1719px;
+
+font-family: 'Major Mono Display';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 64px;
+/* identical to box height */
+
+color: #46E840;
+}
+
+#user-card {
+
+}
+
 /* TYPING EFFECT STYLE BELOW */
 
 :root {
