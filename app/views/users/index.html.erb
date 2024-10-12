@@ -31,22 +31,24 @@
   <%= f.text_field :codename, :placeholder=>"BECOME A NEW SHINOBI..."%>
   <%= f.submit "Join", :id=>"button"%>
  <%end%>
- 
-  <%# <input type="text" id="name" name="name" placeholder="BE A NEW SHINOBI..." 
-  required minlength="2" maxlength="20" /> %>
-  <%# <button>Join</button> %>
 
 
   <h1 id="shinobi-count">Join <%=User.count%> Shinobi’s</h1>
-
-
-  <ul>
+  <div id="user-table">
+     <ul>
     <% @users.each do |user| %>
-      <li> 
-        <%= user.codename %>
-      </li>
+      <div id="styled-name">
+        <li>
+          <%= user.codename %>
+        </li>
+      </div>
     <% end %>
   </ul>
+  </div>
+
+
+  <%# LIST OF ALL USERS %>
+ 
 
 </body>
 </html>
