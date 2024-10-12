@@ -32,7 +32,7 @@
   <%= f.submit "Join", :id=>"button"%>
  <%end%>
 
-
+  <!-- 
   <h1 id="shinobi-count">Join <%=User.count%> Shinobi’s</h1>
   <div id="user-table">
      <ul>
@@ -45,6 +45,14 @@
     <% end %>
   </ul>
   </div>
+  -->
+  <h1 id="shinobi-count">Join <%=User.count%> Shinobi’s</h1>
+  <div id="user-table">
+    <div id="styled-name">
+      <% @users.each do |user|%>
+        <%= user.codename %>
+      <% end %>
+    </div>
 
 
   <%# LIST OF ALL USERS %>

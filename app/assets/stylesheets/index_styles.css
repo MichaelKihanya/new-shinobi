@@ -158,25 +158,31 @@ color: #46E840;
 
 /* Group 1 */
 #user-table{
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+align-content: flex-start;
+padding: 0px;
+gap: 46px 17px;
+
 position: absolute;
 width: 796px;
 height: 380px;
 left: 231px;
 top: 1886px;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 border: white solid;
 }
-ul {
-  list-style-type: none;
-  font-family: 'Major Mono Display';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 40px;
-}
+
 #styled-name {
 background: rgba(245, 245, 245, 0.2);
 border-radius: 70px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 20px;
 }
 
 li {
