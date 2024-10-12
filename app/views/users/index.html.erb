@@ -26,17 +26,20 @@
     THE NEW SHINOBI CODE each day...
   </div>
 
-  <input type="text" id="name" name="name" placeholder="BE A NEW SHINOBI..." 
-  required minlength="2" maxlength="20" />
-  <button>Join</button>
+ <%# FORM %>
+ <%= form_with model: User.create do |f|%>
+  <%= f.text_field :codename, :placeholder=>"BECOME A NEW SHINOBI..."%>
+  <%= f.submit "Join", :id=>"button"%>
+ <%end%>
+ 
+  <%# <input type="text" id="name" name="name" placeholder="BE A NEW SHINOBI..." 
+  required minlength="2" maxlength="20" /> %>
+  <%# <button>Join</button> %>
 
 
-  <h1 id="shinobi-count">Join 442, 392 Shinobi’s</h1>
-  <div id="user-card">
-    <div id="users-name">tester1</div>
-  </div>
+  <h1 id="shinobi-count">Join <%=User.count%> Shinobi’s</h1>
 
-  <div>Users</div>
+
   <ul>
     <% @users.each do |user| %>
       <li> 

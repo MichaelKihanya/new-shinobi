@@ -107,7 +107,7 @@ line-height: 40px;
 color: #46E840;
 }
 
-input {
+#user_codename {
 position: absolute;
 width: 844px;
 height: 71px;
@@ -123,7 +123,7 @@ font-size: medium;
 text-align: center;
 }
 
-button {
+#button {
 position: absolute;
 width: 243px;
 height: 71px;
