@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to users_url
     else
-      render :new, status: :unproccessable_entity
+      render :index, status: :unprocessable_entity
     end
   end
 
