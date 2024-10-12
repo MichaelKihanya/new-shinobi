@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Major Mono Display');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond');
 
 body {
   position: relative;
@@ -91,9 +92,9 @@ position: absolute;
 width: 848px;
 height: 80px;
 left: calc(50% - 848px/2);
-top: 1172px;
+top: 1200px;
 
-font-family: 'Major Mono Display';
+font-family: 'EB Garamond';
 font-style: normal;
 font-weight: 400;
 font-size: 24px;
@@ -173,37 +174,29 @@ height: 380px;
 left: 231px;
 top: 1886px;
 
-border: white solid;
+/* border: white solid; */
 }
 
 #styled-name {
 background: rgba(245, 245, 245, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 70px;
 display: flex;
 flex-direction: row;
 justify-content: center;
-margin: 20px;
-}
-
-li {
+align-items: center;
+/* margin: 20px; */
 font-family: 'Major Mono Display';
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
 line-height: 40px;
-/* identical to box height, or 222% */
 
 color: #46E840;
+
+width: 185px;
+height: 60px;
 }
-
-
-
-
-
-
-
-
-
 
 /* TYPING EFFECT STYLE BELOW */
 

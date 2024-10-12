@@ -48,14 +48,12 @@
   -->
   <h1 id="shinobi-count">Join <%=User.count%> Shinobi’s</h1>
   <div id="user-table">
-    <div id="styled-name">
-      <% @users.each do |user|%>
+      <% @users.reverse.each do |user|%>
+      <div id="styled-name">
         <%= user.codename %>
+      </div>
       <% end %>
-    </div>
-
-
-  <%# LIST OF ALL USERS %>
+  </div>
  
 
 </body>
