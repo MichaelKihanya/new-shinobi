@@ -1,7 +1,7 @@
 databases:
   - name: new-shinobi
-    databaseName: new-shinobi
-    user: new-shinobi
+    databaseName: new-hinobi
+    user: newshinobi
     plan: free
 
 services:
