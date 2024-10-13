@@ -1,6 +1,6 @@
 databases:
   - name: new-shinobi
-    databaseName: new-shinobi-db
+    databaseName: new-shinobi
     user: new-shinobi
     plan: free
 
