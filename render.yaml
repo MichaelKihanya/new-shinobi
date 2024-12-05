@@ -2,13 +2,13 @@ databases:
   - name: newshinobi
     databaseName: newshinobi
     user: newshinobi
-    plan: free
+    plan: starter
 
 services:
   - type: web
     name: newshinobi
     runtime: ruby
-    plan: free
+    plan: starter
     buildCommand: "./bin/render-build.sh"
     preDeployCommand: "bundle exec rails db:migrate" # preDeployCommand only available on paid instance types
     startCommand: "bundle exec rails server"
