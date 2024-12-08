@@ -1,4 +1,5 @@
 # The New Shinobi
+![](app/assets/newshinobilandingpage.gif)
 ## Project Description
 ### Design/UI/UX
 - User cards
