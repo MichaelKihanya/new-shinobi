@@ -2,7 +2,8 @@
 *The New Shinobi Code* is a Ruby on Rails app that began while completing exercises in the Foundations of Humane Technology [course](https://www.humanetech.com/course).
 Inspiration is taken from a Martin Luther King Jr. [quote](https://www.blackengineer.com/imported_wordpress/mlk-science-technology-society/#:~:text=“Through%20our%20scientific%20and%20technological,all%20perish%20together%20as%20fools.) and the anime [Naruto](https://en.wikipedia.org/wiki/Naruto).
 *The New Shinobi Code* can be viewed [here](https://newshinobi.onrender.com/).
-![](app/assets/newshinobilandingpage.gif)
+
+![Image showing landing page of The New Shinobi Code website](app/assets/shinobilandingpage.png)
 ## Project Description
 ### Design/UI/UX
 - User cards
