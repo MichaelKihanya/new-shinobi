@@ -4,15 +4,13 @@ Inspiration is taken from a Martin Luther King Jr. [quote](https://www.blackengi
 *The New Shinobi Code* can be viewed [here](https://newshinobi.onrender.com/).
 
 ![Image showing landing page of The New Shinobi Code website](app/assets/shinobilandingpage.png)
-## Project Description
-### Design/UI/UX
-- User cards
-  - for each user that joins to live by "The New Shinobi Code"
-- Fan FAQ component
-- Push notifications
-  - Message: "Today, you live by the New Shinobi Code"
-- Colors: Lime Green (46E840), Brown (744F00), Dark Purple (74005F)
-- Font: Major Mono Display
+## Inspiration/Purpose
+>Through our scientific and technological genius, we've made of this world a neighborhood. And now through our moral and ethical commitment, we must make of it a brotherhood. We must all learn to live together as brothers—or we will all perish together as fools. 
+-Martin Luther King Jr.
+
+How do we come up with cultural mechanisms to defend our psychological and cultural borders? 
+How do we create a society without truth decay/misinformation while upholding the freedoms we hold dear? 
+Enter *The New Shinobi Code*
 ## Technology(ies)
 - HTML
 - CSS
