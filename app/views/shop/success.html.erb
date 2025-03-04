@@ -1,0 +1,28 @@
+<div class="container mx-auto px-4 py-16">
+  <div class="max-w-2xl mx-auto text-center">
+    <div class="mb-8">
+      <svg class="mx-auto h-16 w-16 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </div>
+    
+    <h1 class="text-4xl font-bold mb-4">Thank You for Your Order!</h1>
+    <p class="text-xl text-gray-600 mb-8">Your order has been successfully placed and is being processed.</p>
+    
+    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Order Details</h2>
+      <div class="text-left">
+        <p class="mb-2"><strong>Order ID:</strong> <%= @order.id %></p>
+        <p class="mb-2"><strong>Product:</strong> <%= @product.title %></p>
+        <p class="mb-2"><strong>Amount:</strong> $<%= number_with_precision(@order.amount, precision: 2) %></p>
+        <p class="mb-2"><strong>Email:</strong> <%= @order.customer_email %></p>
+      </div>
+    </div>
+    
+    <p class="text-gray-600 mb-8">
+      We'll send you an email with your order confirmation and tracking information once your order ships.
+    </p>
+    
+    <%= link_to "Continue Shopping", shop_index_path, class: "bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 inline-block" %>
+  </div>
+</div>

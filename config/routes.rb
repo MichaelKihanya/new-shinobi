@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'shop/index'
+  get 'shop/show'
+  get 'shop/checkout'
+  get 'shop/success'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resource :users
   root "users#index"
@@ -9,4 +13,13 @@ Rails.application.routes.draw do
  
   # Defines the root path route ("/")
   # root "posts#index"
+
+  resources :products, only: [:index, :show]
+  
+  resources :shop, only: [:index, :show] do
+    member do
+      get :checkout
+      get :success
+    end
+  end
 end

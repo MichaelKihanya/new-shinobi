@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Product.create!(
+  title: "Your T-Shirt Name",
+  description: "Your T-Shirt Description",
+  price: 29.99,
+  printify_id: "your_printify_product_id",
+  stripe_price_id: "your_stripe_price_id",
+  active: true
+)
+
+
+
