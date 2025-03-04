@@ -14,10 +14,10 @@
     <div>Shinobi's must demonstate continuous progress</div>
   </div>
   <div id="rightside-code">
-    <div>Shinobi’s value the lives of villagers over their comrades</div>
-    <div>Shinobi’s strive for mental fortitude</div>
-    <div>Shinobi’s trust only their intuition</div>
-    <div>Shinobi’s are lifelong learners</div>
+    <div>Shinobi's value the lives of villagers over their comrades</div>
+    <div>Shinobi's strive for mental fortitude</div>
+    <div>Shinobi's trust only their intuition</div>
+    <div>Shinobi's are lifelong learners</div>
   </div>
   
   <h2>Join the village of the hidden door</h2>
@@ -32,21 +32,7 @@
   <%= f.submit "Join", :id=>"button"%>
  <%end%>
 
-  <!-- 
-  <h1 id="shinobi-count">Join <%=User.count%> Shinobi’s</h1>
-  <div id="user-table">
-     <ul>
-    <% @users.each do |user| %>
-      <div id="styled-name">
-        <li>
-          <%= user.codename %>
-        </li>
-      </div>
-    <% end %>
-  </ul>
-  </div>
-  -->
-  <h1 id="shinobi-count">Join <%=User.count%> Shinobi’s</h1>
+  <h1 id="shinobi-count">Join <%=User.count%> Shinobi's</h1>
   <div id="user-table">
       <% @users.reverse.each do |user|%>
       <div id="styled-name">
@@ -54,7 +40,5 @@
       </div>
       <% end %>
   </div>
- 
-
 </body>
 </html>

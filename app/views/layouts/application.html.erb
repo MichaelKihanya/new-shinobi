@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NewShinobi</title>
+    <title>New Shinobi</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,9 +9,79 @@
     <%= favicon_link_tag asset_path('favicon-5.ico') %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond" rel="stylesheet">
+    
+    <style>
+      body {
+        position: relative;
+        width: 1280px;
+        height: 2400px;
+        background: linear-gradient(180deg, #744F00 0%, #74005F 100%);
+        margin: 0 auto;
+        padding-top: 4rem;
+      }
+
+      .nav-container {
+        background: rgba(122, 84, 115, 0.95);
+        padding: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .nav-links a {
+        color: #46E840;
+        text-decoration: none;
+        font-family: 'Major Mono Display', monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.1rem;
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        background: rgba(245, 245, 245, 0.1);
+      }
+      
+      .nav-links a:hover {
+        background: rgba(245, 245, 245, 0.2);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transform: translateY(-2px);
+      }
+
+      /* Default text styles for consistency */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Major Mono Display', monospace;
+        color: #46E840;
+      }
+
+      p {
+        font-family: 'EB Garamond', serif;
+        color: #46E840;
+      }
+    </style>
+    <%= yield :head %>
   </head>
 
   <body>
+    <nav class="nav-container">
+      <div class="nav-links">
+        <%= link_to "Home", root_path %>
+        <%= link_to "Shop", shop_index_path %>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

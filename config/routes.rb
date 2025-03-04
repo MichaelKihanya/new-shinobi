@@ -16,8 +16,10 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
   
-  resources :shop, only: [:index, :show] do
+  resources :shop, only: [:index] do
     member do
+      post :update_image
+      post :select_size
       get :checkout
       get :success
     end

@@ -1,18 +1,148 @@
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold mb-8">T-Shirt Shop</h1>
-  
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <% @products.each do |product| %>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="p-4">
-          <h2 class="text-xl font-semibold mb-2"><%= product.title %></h2>
-          <p class="text-gray-600 mb-4"><%= product.description %></p>
-          <div class="flex justify-between items-center">
-            <span class="text-lg font-bold">$<%= number_with_precision(product.price, precision: 2) %></span>
-            <%= link_to "View Details", shop_path(product), class: "bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" %>
+<div class="product-page">
+  <div class="product-container" data-controller="product" data-product-stripe-key-value="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>" data-product-checkout-url-value="<%= checkout_shop_path(@product) %>">
+    <!-- Navigation -->
+    <nav class="nav-links">
+      <%= link_to "HOME", root_path, class: "nav-link" %>
+      <%= link_to "SHOP", shop_index_path, class: "nav-link active" %>
+    </nav>
+
+    <div class="product-layout">
+      <!-- Left: Image Gallery -->
+      <div class="gallery-container">
+        <!-- Main Image -->
+        <div class="main-image-container">
+          <%= image_tag @images.first, 
+              id: "main-image",
+              class: "main-image",
+              data: { product_target: "mainImage" },
+              alt: "T-shirt main view" %>
+        </div>
+        
+        <!-- Thumbnails -->
+        <div class="thumbnails-container">
+          <% @images.each_with_index do |img, index| %>
+            <button type="button"
+                class="thumbnail-btn <%= index == 0 ? 'active' : '' %>"
+                data: { 
+                  product_target: "thumbnailBtn",
+                  action: "click->product#updateImage"
+                }>
+              <%= image_tag img, 
+                  class: "thumbnail-image",
+                  alt: "T-shirt view #{index + 1}" %>
+            </button>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Right: Product Info -->
+      <div class="product-info">
+        <div class="product-header">
+          <h1 class="product-title">CIVIL RIGHTS ACTIVISTS X ANIME CHARACTERS T-SHIRT</h1>
+          <div class="product-rating">
+            <div class="stars">★★★★★</div>
+            <a href="#reviews" class="review-count">19 reviews</a>
+          </div>
+        </div>
+
+        <div class="product-price">
+          <span class="price">$35.00</span>
+        </div>
+
+        <%= form_tag "#", 
+            class: 'product-form',
+            data: {
+              product_target: "form",
+              action: "submit->product#checkout"
+            } do %>
+          <!-- Size Selection -->
+          <div class="size-section">
+            <label>Size:</label>
+            <div class="size-grid">
+              <% @sizes.each do |size| %>
+                <button type="button"
+                    class="size-btn"
+                    data: {
+                      product_target: "sizeBtn",
+                      action: "click->product#selectSize"
+                    }>
+                  <%= size %>
+                </button>
+              <% end %>
+            </div>
+          </div>
+
+          <!-- Quantity Selection -->
+          <div class="quantity-section">
+            <label>Quantity:</label>
+            <%= select_tag :quantity, 
+                options_for_select(1..10),
+                class: 'quantity-select' %>
+          </div>
+
+          <!-- Buy Button -->
+          <div class="buy-section">
+            <%= submit_tag 'Buy Now', class: 'buy-button' %>
+          </div>
+        <% end %>
+
+        <!-- Product Details -->
+        <div class="product-details">
+          <h2>About this item</h2>
+          <ul class="features-list">
+            <li>Premium quality 100% US cotton for maximum comfort and durability</li>
+            <li>Unique design featuring civil rights activists and anime characters</li>
+            <li>Double-stitched seams and reinforced shoulder tape</li>
+            <li>Pre-shrunk fabric to maintain size and shape</li>
+            <li>Ethically sourced materials and fair labor practices</li>
+          </ul>
+        </div>
+
+        <!-- Shipping Info -->
+        <div class="shipping-info">
+          <div class="delivery-status">
+            <span class="status-icon">✓</span>
+            <div>
+              <p class="status-text">In Stock</p>
+              <p class="delivery-text">FREE Delivery by Tomorrow</p>
+            </div>
+          </div>
+          
+          <div class="secure-transaction">
+            <span class="lock-icon">🔒</span>
+            <span>Secure transaction</span>
+          </div>
+
+          <div class="seller-info">
+            <p>Ships from <span class="highlight">New Shinobi</span></p>
+            <p>Sold by <span class="highlight">New Shinobi</span></p>
+          </div>
+
+          <div class="return-policy">
+            <p class="policy-header">Return Policy:</p>
+            <p>30-day returns, buyer pays shipping</p>
           </div>
         </div>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
+
+<%= content_for :head do %>
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <script src="https://js.stripe.com/v3/"></script>
+<% end %>
+
+<% content_for :javascript do %>
+  <script>
+    const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+    
+    document.addEventListener('ajax:success', function(event) {
+      const [data, status, xhr] = event.detail;
+      
+      if (xhr.responseURL.includes('checkout')) {
+        stripe.redirectToCheckout({ sessionId: data.id });
+      }
+    });
+  </script>
+<% end %>
