@@ -1,10 +1,5 @@
 <div class="product-page">
   <div class="product-container" data-controller="product" data-product-stripe-key-value="<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>" data-product-checkout-url-value="<%= checkout_shop_path(@product) %>">
-    <!-- Navigation -->
-    <nav class="nav-links">
-      <%= link_to "HOME", root_path, class: "nav-link" %>
-      <%= link_to "SHOP", shop_index_path, class: "nav-link active" %>
-    </nav>
 
     <div class="product-layout">
       <!-- Left: Image Gallery -->
